@@ -8,10 +8,8 @@ class Landing extends Component {
     return (
       <React.Fragment>
         <div className="header">
-          <h1 className="header-title">
-            Crop yeild prediction using machine learning{" "}
-          </h1>
-          {/* <p className="header-text">
+          <h1 className="header-title">Easy peasy ML </h1>
+          <p className="header-text">
             Easy peasy ml is a{" "}
             <strong className="header-text-highlight">powerful tool</strong> to{" "}
             <strong className="header-text-highlight">automate</strong> the{" "}
@@ -19,7 +17,7 @@ class Landing extends Component {
               algorithm selection
             </strong>{" "}
             process
-          </p> */}
+          </p>
           <Link className="header-link" to="/product">
             Get started
           </Link>

@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
-
+  background-image: url(https://obsidian.md/images/starfield.svg);
   background-position: 50% 180px;
   background-size: 800px;
   background-repeat: repeat-x;
@@ -24,12 +24,12 @@
   color: #fff;
   font-weight: 600;
   padding: 15px;
-  background-color: #6df28e;
+  background-color: #7f6df2;
   border-radius: 20px;
 }
 .header-link:hover {
   color: #fff;
-  background-color: #8cf26d;
+  background-color: #7f6df2;
 }
 
 .header-text {
@@ -40,5 +40,5 @@
   margin-bottom: 20px;
 }
 .header-text-highlight {
-  color: #88f26d;
+  color: #7f6df2;
 }
