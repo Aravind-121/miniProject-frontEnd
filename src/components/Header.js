@@ -18,7 +18,10 @@ class Header extends Component {
           <Link
             className="nav-link"
             to="/"
-            style={{ fontWeight: "bold", color: "#7f6df2" }}
+            style={{
+              fontWeight: "bold",
+              color: "#7f6df2",
+            }}
           >
             Automated algo selection
           </Link>
@@ -33,25 +36,6 @@ class Header extends Component {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav ms-auto mr-auto me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  About this app
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/product">
-                  Product
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
     );

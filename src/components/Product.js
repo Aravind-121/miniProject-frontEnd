@@ -1,21 +1,43 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
+import Table from "./Table";
 
 class Product extends Component {
   state = {
     datasetLink: "",
+    showTable: false,
   };
 
   handleSubmit = async (e) => {
-    console.log(this.state);
     e.preventDefault();
-    const userData = {
-      datasetLink: this.state.datasetLink,
-    };
-    console.log(userData);
-    const res = await axios.post("/api/datasetlink", userData);
+    const res = await axios.post("/api/datasetlink", {
+      data: this.state.datasetLink,
+    });
+    this.props.history.push("/result");
+  };
 
-    console.log(res.data);
+  validURL = (str) => {
+    var pattern = new RegExp(
+      "^(https?:\\/\\/)?" + // protocol
+        "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+        "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+        "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+        "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+        "(\\#[-a-z\\d_]*)?$",
+      "i"
+    ); // fragment locator
+    return !!pattern.test(str);
+  };
+
+  renderLoader = () => {
+    return (
+      <div className="text-center loader">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   };
 
   render() {
@@ -54,9 +76,10 @@ class Product extends Component {
             </button>
           </div>
         </form>
+        {/* {this.state.showTable && <Table />} */}
       </React.Fragment>
     );
   }
 }
 
-export default Product;
+export default withRouter(Product);

@@ -1,0 +1,32 @@
+.description-card {
+  width: 40%;
+  margin-left: 30%;
+  color: white;
+  background-color: #111;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+}
+.description-card h2 {
+  color: #7f6df2;
+}
+.description-card strong {
+  color: #7f6df2af;
+}
+.form-container select {
+  width: 50%;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+  margin-top: 40px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
